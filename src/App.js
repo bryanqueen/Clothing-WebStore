@@ -34,9 +34,7 @@ class App extends React.Component {
             ...snapShot.data(),
           });
         });
-      }
-
-      setCurrentUser({ userAuth });
+      } else setCurrentUser(null);
     });
   }
 
@@ -51,12 +49,18 @@ class App extends React.Component {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/signin" element={<SignInAndSignUpPage />} />
+          <Route exact path="/signin" element={<SignInAndSignUpPage />} />
         </Routes>
       </div>
     );
   }
 }
+
+//
+
+// const mapStateToProps = ({ user }) => ({
+//   currentUser: user.currentUser,
+// });
 
 const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
