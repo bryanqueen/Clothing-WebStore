@@ -12,6 +12,8 @@ import ShopPage from './pages/shop/shop.component';
 
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
 
+import CheckoutPage from './pages/checkout/checkout';
+
 import Header from './components/header/header.component';
 
 import { auth, creatUserProfileDocument } from './firebase/firebase.utils';
@@ -46,9 +48,11 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
+          <Route exact path="/checkout" element={<CheckoutPage />} />
           <Route exact path="/signin" element={<SignInAndSignUpPage />} />
         </Routes>
       </div>
