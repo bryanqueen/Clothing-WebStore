@@ -315,6 +315,38 @@ const SHOP_DATA = [
       'https://www.oncovia.com/25001/bamboo-turban-mathilde-light-pink-japan.jpg',
     price: 20,
   },
+  {
+    id: 45,
+    category: 'jackets',
+    name: 'Hashirama ',
+    imageUrl:
+      'https://animehoodie.com/wp-content/uploads/2021/08/unisex-captain-america-3d-print-fashion-hoodies.jpg',
+    price: 74,
+  },
+  {
+    id: 46,
+    category: 'jackets',
+    name: 'Kakashi',
+    imageUrl:
+      'https://www.u-buy.com.ng/productimg/?image=aHR0cHM6Ly9pbWFnZXMtbmEuc3NsLWltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzYxNGw4UnF1TktMLl9TUzQwMF8uanBn.jpg',
+    price: 67,
+  },
+  {
+    id: 47,
+    category: 'jackets',
+    name: 'Naruto Hoodie',
+    imageUrl:
+      'https://i.pinimg.com/474x/86/c0/7b/86c07bc46fa76692dda40893dbfa112a.jpg',
+    price: 60,
+  },
+  {
+    id: 48,
+    category: 'jackets',
+    name: 'Sage of Six Path',
+    imageUrl:
+      'https://cdn.shopify.com/s/files/1/2241/3689/products/gearhuman-3d-naruto-obito-sage-of-six-paths-custom-tshirt-hoodie-apparel-cw08125-3d-apparel-950719_530x@2x.jpg?v=1626779072',
+    price: 60,
+  },
 ];
 
 export default SHOP_DATA;
