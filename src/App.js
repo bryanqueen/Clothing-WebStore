@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-import './App.css';
+// import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 
@@ -18,12 +18,16 @@ import CheckoutPage from './pages/checkout/checkout';
 
 import Header from './components/header/header.component';
 
+import { GlobalStyle } from './global.styles';
+
 import { auth, creatUserProfileDocument } from './firebase/firebase.utils';
 
 import { setCurrentUser } from './redux/user/user.action';
 
 import ShopPageContainer from './pages/shop/shopContainer.component';
+
 import { setItems } from './redux/shop/shop.action';
+
 import SHOP_DATA from './redux/shop/shop.data';
 
 class App extends React.Component {
@@ -44,7 +48,7 @@ class App extends React.Component {
         });
       } else setCurrentUser(null);
     });
-    // console.log(SHOP_DATA);
+   
     setItems(SHOP_DATA);
   }
 
@@ -55,6 +59,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle/>
         <Header />
 
         <Routes>

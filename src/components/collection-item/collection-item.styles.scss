@@ -1,5 +1,5 @@
 .collection-item {
-  width: 22vw;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -30,6 +30,13 @@
     .custom-button {
       opacity: 0.85;
       display: flex;
+
+      @media screen and (max-width: 800px) {
+        display: block;
+        opacity: 0.9;
+        min-width: unset;
+        padding: 0 10px;
+      }
     }
   }
 
@@ -47,6 +54,38 @@
 
     .price {
       width: 10%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 44vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+    height: 50vh;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
     }
   }
 }

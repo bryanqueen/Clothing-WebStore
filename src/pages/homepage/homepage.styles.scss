@@ -3,4 +3,34 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
+
+  
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+       
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+    height: 50vh;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
+    }
+  }
 }

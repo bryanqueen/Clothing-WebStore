@@ -8,6 +8,9 @@ import { auth, creatUserProfileDocument } from '../../firebase/firebase.utils';
 
 import './sign-up.styles.scss';
 
+
+// import { SignUpContainer, SignUpTitle } from './sign-up.styles';
+
 class SignUp extends React.Component {
   constructor() {
     super();
