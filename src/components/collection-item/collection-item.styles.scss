@@ -1,5 +1,5 @@
 .collection-item {
-  width: 20vw;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -58,11 +58,11 @@
   }
 
   @media screen and (max-width: 800px) {
-    width: 44vw;
+    width: 43vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     &:hover {
       .image {
         opacity: unset;
@@ -74,18 +74,18 @@
     }
   }
 
-  @media screen and (max-width: 600px) {
-    width: 80vw;
-    height: 50vh;
+  // @media screen and (max-width: 600px) {
+  //   width: 80vw;
+  //   height: 50vh;
 
-    &:hover {
-      .image {
-        opacity: unset;
-      }
+  //   &:hover {
+  //     .image {
+  //       opacity: unset;
+  //     }
 
-      button {
-        opacity: unset;
-      }
-    }
-  }
+  //     button {
+  //       opacity: unset;
+  //     }
+  //   }
+  // }
 }

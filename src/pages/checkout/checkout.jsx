@@ -6,6 +6,8 @@ import { createStructuredSelector } from 'reselect';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 
+import PayOut from '../../components/Rave/payment';
+
 import {
   selectCartItems,
   selectCartTotal,
@@ -32,12 +34,13 @@ const CheckoutPage = ({ cartItems, total }) => (
         <span>Remove</span>
       </div>
     </div>
-    {cartItems.map((cartItem) =>(
-        <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
+    {cartItems.map((cartItem) => (
+      <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
 
     <div className="total">
-      <span className='total' >TOTAL: ${total}</span>
+      <PayOut total= {total} >Pay Now</PayOut>
+      <span className="total">TOTAL: &#8358;{total}</span>
     </div>
   </div>
 );
