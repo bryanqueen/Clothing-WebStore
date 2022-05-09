@@ -48,12 +48,14 @@
     font-size: 18px;
 
     .name {
-      width: 90%;
+      width: 80%;
       margin-bottom: 15px;
     }
 
     .price {
-      width: 10%;
+      width: 20%;
+      padding: auto;
+      text-align: right;
     }
   }
 
@@ -74,18 +76,18 @@
     }
   }
 
-  // @media screen and (max-width: 600px) {
-  //   width: 80vw;
-  //   height: 50vh;
+  @media screen and (max-width: 600px) {
+    width: 80vw;
+    height: 50vh;
 
-  //   &:hover {
-  //     .image {
-  //       opacity: unset;
-  //     }
+    &:hover {
+      .image {
+        opacity: unset;
+      }
 
-  //     button {
-  //       opacity: unset;
-  //     }
-  //   }
-  // }
+      button {
+        opacity: unset;
+      }
+    }
+  }
 }

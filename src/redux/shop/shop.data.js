@@ -219,7 +219,7 @@ const SHOP_DATA = [
   {
     id: 32,
     category: 'men',
-    name: 'Black & White Longsleeve',
+    name: 'Sweat Shirt',
     imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
     price: 6500,
   },
@@ -318,7 +318,7 @@ const SHOP_DATA = [
   {
     id: 45,
     category: 'jackets',
-    name: 'Hashirama ',
+    name: 'Ninja ',
     imageUrl:
       'https://animehoodie.com/wp-content/uploads/2021/08/unisex-captain-america-3d-print-fashion-hoodies.jpg',
     price: 7400,

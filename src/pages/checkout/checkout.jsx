@@ -19,13 +19,13 @@ const CheckoutPage = ({ cartItems, total }) => (
   <div className="checkout-page">
     <div className="checkout-header">
       <div className="header-block">
-        <span>Product</span>
+        <span>Product </span>
       </div>
       <div className="header-block">
-        <span>Desc</span>
+        <span> | Desc</span>
       </div>
       <div className="header-block">
-        <span>Qty</span>
+        <span> Qty</span>
       </div>
       <div className="header-block">
         <span>Price</span>
@@ -39,8 +39,16 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
 
     <div className="total">
-      <PayOut total= {total} >Pay Now</PayOut>
-      <span className="total">TOTAL: &#8358;{total}</span>
+      {/* <span className="total">TOTAL: &#8358;{total}</span> */}
+      <span className="button">
+        <PayOut total={total} />
+      </span>
+    </div>
+
+    <div className="warning">
+      <span>* Please use the following test credit card for payment</span>
+      <br />
+      5531 8866 5214 2950 - Exp: 09/32 - CVV: 564 Pin: 3310 OTP:12345
     </div>
   </div>
 );

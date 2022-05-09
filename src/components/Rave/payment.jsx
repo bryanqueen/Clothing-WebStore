@@ -6,12 +6,14 @@ import CustomButton from '../custom-button/custom-button';
 
 import { useDispatch } from 'react-redux';
 
+// import { useNavigate } from 'react-router-dom';
+
 import CartActionTypes from '../../redux/cart/cart.types';
 
-
-
 export default function PayOut({ total }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+  // const navigate = useNavigate
 
   const config = {
     public_key: 'FLWPUBK_TEST-db3d451721746e9066fa11dc1b01c28c-X',
@@ -32,17 +34,23 @@ export default function PayOut({ total }) {
   };
 
   const handleFlutterPayment = useFlutterwave(config);
-
+  //
   return (
     <div className="PayOut">
       <CustomButton
+        price={total}
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
               console.log(response);
               if (response.status === 'successful') {
-                alert(response.status)
+                alert(response.status);
                 dispatch({ type: CartActionTypes.CHECK_OUT_CLEAR_OUT });
+              } else {
+                console.log('Payment Error: ', Error);
+                alert(
+                  'There was an issu with your payment! Please make sure you use the provided credit card'
+                );
               }
               closePaymentModal(); // this will close the modal programmatically
             },
@@ -50,7 +58,7 @@ export default function PayOut({ total }) {
           });
         }}
       >
-        Pay
+        Pay Now
       </CustomButton>
     </div>
   );
