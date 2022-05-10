@@ -18,7 +18,7 @@ export default function PayOut({ total }) {
 
   /* A configuration object that is passed to the useFlutterwave hook. */
   const config = {
-    public_key: 'FLWPUBK_TEST-db3d451721746e9066fa11dc1b01c28c-X',
+    public_key: process.env.REACT_APP_PUBLIC_KEY,
     tx_ref: Date.now(),
     amount: total,
     currency: 'NGN',
