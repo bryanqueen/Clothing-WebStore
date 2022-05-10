@@ -46,7 +46,7 @@ export default function PayOut({ total }) {
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
-              console.log(response);
+              // console.log(response);
               if (response.status === 'successful') {
                 alert(response.status);
                 dispatch({ type: CartActionTypes.CHECK_OUT_CLEAR_OUT });
