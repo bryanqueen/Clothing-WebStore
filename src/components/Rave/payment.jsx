@@ -15,6 +15,7 @@ export default function PayOut({ total }) {
 
   // const navigate = useNavigate
 
+  /* A configuration object that is passed to the useFlutterwave hook. */
   const config = {
     public_key: 'FLWPUBK_TEST-db3d451721746e9066fa11dc1b01c28c-X',
     tx_ref: Date.now(),
@@ -33,12 +34,14 @@ export default function PayOut({ total }) {
     },
   };
 
+ /* A function that is called when the button is clicked. */
   const handleFlutterPayment = useFlutterwave(config);
   //
   return (
     <div className="PayOut">
       <CustomButton
         price={total}
+       /* A function that is called when the button is clicked. */
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
