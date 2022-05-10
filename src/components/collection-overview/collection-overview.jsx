@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { selectCollections } from '../../redux/shop/shop.selectors';
+
 import { CATEGORIES } from '../../redux/shop/shop.utils';
 
 import CollectionPreview from '../collection/collection.component';
-
 
 import './collection-overview.styles.scss';
 
@@ -18,15 +18,13 @@ component. */
 const CollectionsOverView = ({ collections }) => {
   return (
     <div className="collections-overview">
-      {CATEGORIES.map(cat => (
-
-      <CollectionPreview
-        title={cat}
-        items={collections.filter((x) => x.category === cat)}
-      />
+      {CATEGORIES.map((cat,index) => (
+        <CollectionPreview 
+          key={index}
+          title={cat}
+          items={collections.filter((x) => x.category === cat)}
+        />
       ))}
-
-      
     </div>
   );
 };

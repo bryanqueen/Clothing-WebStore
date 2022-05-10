@@ -1,5 +1,6 @@
 .collection-item {
   width: 22vw;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -12,6 +13,13 @@
     background-size: cover;
     background-position: cover;
     margin-bottom: 5px;
+    object-fit: contain;
+
+    // @media screen and (max-width: 600px) {
+    //   max-width: 300px;
+    //   display: flex;
+    //   flex-direction: column;
+    // }
   }
 
   .custom-button {
@@ -56,6 +64,24 @@
       width: 20%;
       padding: auto;
       text-align: right;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    max-width: 800px;
+    display: -moz-grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
     }
   }
 

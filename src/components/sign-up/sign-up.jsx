@@ -56,7 +56,7 @@ function that is called when the user clicks the submit button. */
         confirmPassword: '',
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

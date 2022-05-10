@@ -22,21 +22,52 @@ import {
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
-    <CheckoutItemContainer>
-      <ImageContainer>
-        <img src={imageUrl} alt="item" />
-      </ImageContainer>
-      <TextContainer>{name}</TextContainer>
-      <QuantityContainer>
-        <div onClick={() => removeItem(cartItem)}>&#10094;</div>
-        <span>{quantity}</span>
-        <div onClick={() => addItem(cartItem)}>&#10095;</div>
-      </QuantityContainer>
-      <TextContainer>{price}</TextContainer>
-      <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
-        &#10005;
-      </RemoveButtonContainer>
-    </CheckoutItemContainer>
+    <>
+      <CheckoutItemContainer>
+        <ImageContainer>
+          <img src={imageUrl} alt="item" />
+        </ImageContainer>
+        <TextContainer>{name}</TextContainer>
+        <QuantityContainer>
+          <div onClick={() => removeItem(cartItem)}>&#10094;</div>
+          <span>{quantity}</span>
+          <div onClick={() => addItem(cartItem)}>&#10095;</div>
+        </QuantityContainer>
+        <TextContainer>{price * quantity} </TextContainer>
+        <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
+          &#10005;
+        </RemoveButtonContainer>
+      </CheckoutItemContainer>
+
+      {/* <div className="checkout-item-container">
+        <div className="checkout-image-name">
+          <span className="checkout-image-container">
+            <img src={imageUrl} alt="item" />
+          </span>
+          <span>{name}</span>
+          <button
+            className="checkout-btn-1"
+            onClick={() => clearItem(cartItem)}
+          >
+            &#10005;
+          </button>
+        </div>
+        <div className="checkout-qty-price">
+          <QuantityContainer>
+            <div onClick={() => removeItem(cartItem)}>&#10094;</div>
+            <span>{quantity}</span>
+            <div onClick={() => addItem(cartItem)}>&#10095;</div>
+          </QuantityContainer>
+          <TextContainer>{price}</TextContainer>
+          <button
+            className="checkout-btn-2"
+            onClick={() => clearItem(cartItem)}
+          >
+            &#10005;
+          </button>
+        </div>
+      </div> */}
+    </>
   );
 };
 

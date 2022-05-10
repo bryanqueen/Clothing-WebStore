@@ -114,14 +114,14 @@ const SHOP_DATA = [
   {
     id: 17,
     category: 'sneakers',
-    name: 'Timberlands',
+    name: 'T.lands',
     imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
     price: 12500,
   },
   {
     id: 18,
     category: 'jackets',
-    name: 'Black Jean Shearling',
+    name: 'Black Shearling',
     imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
     price: 12500,
   },
@@ -135,7 +135,7 @@ const SHOP_DATA = [
   {
     id: 20,
     category: 'jackets',
-    name: 'Grey Jean Jacket',
+    name: 'Grey Jacket',
     imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
     price: 12000,
   },

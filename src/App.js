@@ -55,11 +55,14 @@ class App extends React.Component {
   componentDidMount() {
     const { setCurrentUser, setItems } = this.props;
 
+    /* Subscribing to the authentication state of the user. */
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await creatUserProfileDocument(userAuth);
 
+       /* Setting the current user. */
         userRef.onSnapshot((snapShot) => {
+         /* Setting the current user. */
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data(),
@@ -68,6 +71,7 @@ class App extends React.Component {
       } else setCurrentUser(null);
     });
    
+    /* Setting the items in the shop. */
     setItems(SHOP_DATA);
   }
 
@@ -118,4 +122,5 @@ const mapDispatchToProps = (dispatch) => ({
   setItems: (data) => dispatch(setItems(data)),
 });
 
+/* Connecting the App component to the Redux store. */
 export default connect(null, mapDispatchToProps)(App);

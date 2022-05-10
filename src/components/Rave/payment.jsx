@@ -4,7 +4,7 @@ import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
 import CustomButton from '../custom-button/custom-button';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // import { useNavigate } from 'react-router-dom';
 
@@ -12,6 +12,7 @@ import CartActionTypes from '../../redux/cart/cart.types';
 
 export default function PayOut({ total }) {
   const dispatch = useDispatch();
+  const loggedInUser = useSelector((state) => state.user.currentUser);
 
   // const navigate = useNavigate
 
@@ -23,9 +24,9 @@ export default function PayOut({ total }) {
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
-      email: 'user@gmail.com',
-      phonenumber: '07064586146',
-      name: 'joel ugwumadu',
+      email: loggedInUser?.email,
+      phonenumber: loggedInUser?.phonenumber,
+      name: loggedInUser?.displayname,
     },
     customizations: {
       title: 'Otk Clothing',
@@ -34,14 +35,14 @@ export default function PayOut({ total }) {
     },
   };
 
- /* A function that is called when the button is clicked. */
+  /* A function that is called when the button is clicked. */
   const handleFlutterPayment = useFlutterwave(config);
   //
   return (
-    <div className="PayOut">
+    <>
       <CustomButton
         price={total}
-       /* A function that is called when the button is clicked. */
+        /* A function that is called when the button is clicked. */
         onClick={() => {
           handleFlutterPayment({
             callback: (response) => {
@@ -50,7 +51,7 @@ export default function PayOut({ total }) {
                 alert(response.status);
                 dispatch({ type: CartActionTypes.CHECK_OUT_CLEAR_OUT });
               } else {
-                console.log('Payment Error: ', Error);
+                // console.log('Payment Error: ', Error);
                 alert(
                   'There was an issue with your payment! Please make sure you use the provided credit card'
                 );
@@ -63,6 +64,6 @@ export default function PayOut({ total }) {
       >
         Pay Now
       </CustomButton>
-    </div>
+    </>
   );
 }
