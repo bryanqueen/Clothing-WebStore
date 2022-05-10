@@ -8,7 +8,6 @@ import { auth, creatUserProfileDocument } from '../../firebase/firebase.utils';
 
 import './sign-up.styles.scss';
 
-
 class SignUp extends React.Component {
   constructor() {
     super();
@@ -20,7 +19,7 @@ class SignUp extends React.Component {
       confirmPassword: '',
     };
   }
-/* A function that is called when the user clicks the submit button. It is a function that is called
+  /* A function that is called when the user clicks the submit button. It is a function that is called
 when the user clicks the submit button. It is a function that is called when the user clicks the
 submit button. It is a function that is called when the user clicks the submit button. It is a
 function that is called when the user clicks the submit button. It is a function that is called when
@@ -57,6 +56,7 @@ function that is called when the user clicks the submit button. */
       });
     } catch (error) {
       // console.log(error);
+      alert(error.message);
     }
   };
 
