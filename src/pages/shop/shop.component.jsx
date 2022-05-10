@@ -10,6 +10,9 @@ import CollectionOverview from '../../components/collection-overview/collection-
 
 import CollectionPreview from '../../components/collection/collection.component';
 
+/* A function that takes in two parameters, collections and category. It returns a div with a className
+of shop-page. It then checks if the category is equal to all. If it is, it returns the
+CollectionOverview component. If it is not, it returns the CollectionPreview component. */
 const ShopPage = ({ collections, category }) => {
   return (
     <div className="shop-page">

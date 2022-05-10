@@ -12,6 +12,10 @@ import {
 
 // import './menu-item.styles.scss';
 
+/**
+ * It's a function that returns a div with a background image and a title.
+ * @returns A MenuItem component that is a styled div with a background image and a title and subtitle.
+ */
 const MenuItem = ({ title, imageUrl, size }) => {
   return (
     <MenuItemContainer className={`${size} menu-item`} to={'/shop/' + title}>

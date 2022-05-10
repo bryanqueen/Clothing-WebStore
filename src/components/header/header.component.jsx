@@ -22,6 +22,7 @@ import { HeaderContainer, LogoContainer, OptionsContainer, Optionlink } from './
 
 // import './header.styles.scss';
 
+/* A function that takes in the state and returns an object. */
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
     <LogoContainer to="/">
@@ -32,6 +33,9 @@ const Header = ({ currentUser, hidden }) => (
       <Optionlink  to="/shop">
         SHOP
       </Optionlink>
+
+      {/* /* A ternary operator. If the currentUser is true, then it will render the first Optionlink. If
+      the currentUser is false, then it will render the second Optionlink. */ }
 
       {currentUser ? (
         <Optionlink  as='div' onClick={() => auth.signOut()}>
@@ -48,9 +52,11 @@ const Header = ({ currentUser, hidden }) => (
   </HeaderContainer>
 );
 
+/* A function that takes in the state and returns an object. */
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden,
 });
 
+/* Connecting the Header component to the redux store. */
 export default connect(mapStateToProps)(Header);

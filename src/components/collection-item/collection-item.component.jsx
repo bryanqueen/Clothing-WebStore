@@ -26,6 +26,10 @@ const CollectionItem = ({ item, addItem }) => {
   );
 };
 
+/**
+ * This function takes a dispatch function as an argument and returns an object with a function called
+ * addItem that takes an item as an argument and dispatches an action with that item as a payload.
+ */
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
 });

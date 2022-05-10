@@ -14,6 +14,14 @@ const config = {
   measurementId: 'G-V0JFRFY4LY',
 };
 
+/**
+ * If the userAuth object exists, then create a userRef object that references the user's document in
+ * the database. If the user's document doesn't exist, then create it.
+ * @param userAuth - The user object that we get from the authentication library.
+ * @param additionalData - This is an object that contains any additional data that you want to store
+ * in your database.
+ * @returns The userRef is being returned.
+ */
 export const creatUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 

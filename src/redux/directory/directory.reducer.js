@@ -35,6 +35,35 @@ const INITIAL_STATE = {
   ],
 };
 
+/**
+ * It takes in a state and an action and returns a new state.
+ *
+ * The state is the current state of the application. The action is an object that describes what
+ * happened.
+ *
+ * The reducer is a pure function. It doesn't mutate the state. It returns a new state.
+ *
+ * The reducer is the only way to change the state.
+ *
+ * The reducer is called every time an action is dispatched.
+ *
+ * The reducer is called with the current state and the action.
+ *
+ * The reducer returns the new state.
+ *
+ * The reducer is the only way to change the state.
+ *
+ * The reducer is called every time an action is dispatched.
+ *
+ * The reducer is called with the current state and the action.
+ *
+ * The reducer returns the new state.
+ *
+ * The reducer is the
+ * @param [state] - the current state of the reducer
+ * @param action - An object that represents the action that was dispatched.
+ * @returns The state is being returned.
+ */
 const directoryReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     default:
@@ -42,4 +71,4 @@ const directoryReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default directoryReducer
+export default directoryReducer;

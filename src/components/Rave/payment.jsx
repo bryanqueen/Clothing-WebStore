@@ -49,7 +49,7 @@ export default function PayOut({ total }) {
               } else {
                 console.log('Payment Error: ', Error);
                 alert(
-                  'There was an issu with your payment! Please make sure you use the provided credit card'
+                  'There was an issue with your payment! Please make sure you use the provided credit card'
                 );
               }
               closePaymentModal(); // this will close the modal programmatically

@@ -42,6 +42,7 @@ const CartDropdown = ({ cartItems, dispatch }) => {
     </div>
   );
 };
+
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
 });

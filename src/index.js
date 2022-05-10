@@ -14,6 +14,7 @@ import App from './App';
 
 import { store, persistor } from './redux/store';
 
+/* Rendering the App component to the root div in the index.html file. */
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

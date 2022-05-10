@@ -20,6 +20,18 @@ class SignUp extends React.Component {
       confirmPassword: '',
     };
   }
+/* A function that is called when the user clicks the submit button. It is a function that is called
+when the user clicks the submit button. It is a function that is called when the user clicks the
+submit button. It is a function that is called when the user clicks the submit button. It is a
+function that is called when the user clicks the submit button. It is a function that is called when
+the user clicks the submit button. It is a function that is called when the user clicks the submit
+button. It is a function that is called when the user clicks the submit button. It is a function
+that is called when the user clicks the submit button. It is a function that is called when the user
+clicks the submit button. It is a function that is called when the user clicks the submit button. It
+is a function that is called when the user clicks the submit button. It is a function that is called
+when the user clicks the submit button. It is a function that is called when the user clicks the
+submit button. It is a function that is called when the user clicks the submit button. It is a
+function that is called when the user clicks the submit button. */
 
   handleSubmit = async (event) => {
     event.preventDefault();

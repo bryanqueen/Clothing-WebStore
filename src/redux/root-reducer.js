@@ -12,12 +12,14 @@ import directoryReducer from './directory/directory.reducer';
 
 import shopReducer from './shop/shop.reducer';
 
+/* A configuration object for the persistReducer function. */
 const persistConfig = {
   key: 'root',
   storage,
   whiteList: ['cart'],
 };
 
+/* Combining all the reducers into one root reducer. */
 const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer,
@@ -26,5 +28,6 @@ const rootReducer = combineReducers({
   
 });
 
+/* Exporting the persistReducer function with the persistConfig and rootReducer as arguments. */
 export default persistReducer(persistConfig, rootReducer);
   

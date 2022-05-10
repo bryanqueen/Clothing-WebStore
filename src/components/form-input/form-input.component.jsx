@@ -2,6 +2,10 @@ import React from 'react';
 
 import './form-input.styles.scss';
 
+/**
+ * If the label prop is truthy, then render a label element with the className of form-input-label,
+ * otherwise, render null.
+ */
 const FormInput = ({ handleChange, label, ...otherProps }) => (
   <div className="group">
     <input className="form-input" onChange={handleChange} {...otherProps} />

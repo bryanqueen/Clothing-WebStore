@@ -10,6 +10,7 @@ import rootReducer from './root-reducer';
 
 const middlewares = [logger];
 
+/* Creating a store with the rootReducer and the middlewares. */
 export const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(...middlewares))

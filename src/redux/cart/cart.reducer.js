@@ -7,6 +7,12 @@ const INITIAL_STATE = {
   cartItems: [],
 };
 
+/**
+ * It takes in the current state and an action and returns a new state.
+ * @param [state] - the current state of the reducer
+ * @param action - {type: "TOGGLE_CART_HIDDEN", payload: undefined}
+ * @returns The state is being returned.
+ */
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CartActionTypes.TOGGLE_CART_HIDDEN:

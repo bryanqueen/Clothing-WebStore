@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+/* A function that is being called. */
 export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'open sans';

@@ -1,5 +1,8 @@
 import CartActionTypes from './cart.types';
 
+/**
+ * It's a function that returns an object with a type property and a payload property.
+ */
 export const toggleCartHidden = () => ({
   type: CartActionTypes.TOGGLE_CART_HIDDEN,
 });

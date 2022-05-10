@@ -19,6 +19,10 @@ class SignIn extends React.Component {
     };
   }
 
+  /* A function that is called when the user clicks the submit button. It prevents the default action
+  of the submit button, which is to refresh the page. It then takes the email and password from the
+  state and uses the firebase function signInWithEmailAndPassword to sign the user in. If the user
+  is not signed in, it will log the error to the console. */
   handleSubmit = async (event) => {
     event.preventDefault();
 

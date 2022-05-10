@@ -4,6 +4,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 
 import './collection.styles.scss';
 
+/* A function that takes in a title and items and returns a div with a title and a preview. */
 const CollectionPreview = ({ title, items }) => (
   <div className="collection-preview">
     <h1 className="title">{title.toUpperCase()}</h1>

@@ -18,6 +18,7 @@ import {
   RemoveButtonContainer,
 } from './checkout-item.styles';
 
+/* A function that takes in an object as an argument and returns a JSX element. */
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
@@ -38,6 +39,12 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
     </CheckoutItemContainer>
   );
 };
+
+/**
+ * This function takes in a dispatch function as an argument and returns an object with three
+ * properties, each of which is a function that takes in an item as an argument and dispatches an
+ * action to the store.
+ */
 
 const mapDispatchToProps = (dispatch) => ({
   clearItem: (item) => dispatch(clearItemFromCart(item)),
